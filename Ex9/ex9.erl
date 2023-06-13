@@ -14,7 +14,7 @@ etsBot()->
   [Type|List_of_lines] = string:split(readlines("etsCommands.txt"),"\n",all),
   %Read all lines from file and put it in list. The first line is Type and the rest is in List_of_lines, every element is line
   Ets = ets:new(elioz,[list_to_atom(Type)]),  %Create Ets
-  {_,Output_File} = file:open("etsRes_206116089.ets", [write]),  %Open a file and call it File
+  {_,Output_File} = file:open("etsRes_205978000.ets", [write]),  %Open a file and call it File
   action_on_line(List_of_lines,Ets,list_to_atom(Type)), %send the lines to action_on_line and I will explain there
   ListEts = ets:tab2list(Ets),
   [io:format(Output_File,"~s ~s~n",[Key,Val])|| {Key,Val} <- ListEts],
